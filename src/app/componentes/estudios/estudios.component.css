@@ -1,15 +1,27 @@
-.imagenes{
-    width: 100% !important;
-    margin-top: 5px;
-
-}
-li{
-  background-color: white;
-    border: 10px solid white;
-    box-shadow: 0 0 5px black ;
-    border-radius: 10px;
-    width: 500px;
-    height: 450px;
-    margin-bottom: 50px;
+.studies-wrapper {
+  padding: 1rem 0 2rem;
 }
 
+.study-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.study-card {
+  padding: 1rem;
+  border-radius: 16px;
+  background: #f8fafc;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.study-card h3 {
+  color: #0f766e;
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .study-grid {
+    grid-template-columns: 1fr;
+  }
+}

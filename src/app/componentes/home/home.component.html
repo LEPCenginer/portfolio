@@ -1,63 +1,53 @@
 
+<div class="p-5 home-wrapper">
+  <div class="hero-card">
+    <div class="hero-copy">
+      <p class="eyebrow">Ingeniero de Sistemas • Desarrollo • Unity</p>
+      <h1 class="animate__animated animate__fadeInDown">{{ title }}</h1>
+      <p class="lead">
+        Soy {{ esteban.nombres }}, Ingeniero de Sistemas con especialización en Sistemas Inteligentes aplicados al IoT,
+        apasionado por el desarrollo de software, la calidad del producto y la creación de soluciones útiles.
+      </p>
 
-<div class="p-5">
-  <mat-grid-tile-header>
+      <p class="lead">
+        Cuento con experiencia en Java, Python, JavaScript, Spring Boot, Flask, Django, Angular y actualmente estoy ampliando mis conocimientos en Unity y C# para el desarrollo de videojuegos.
+      </p>
 
-    <h1 class="animate__animated animate__pulse ">
-      <div class=" animate__animated animate__zoomInDown" [ngStyle]=" {'animation-duration': '3s'}">{{ title }}</div>
-    </h1>
-  </mat-grid-tile-header>
-
-  <mat-grid-list [cols]="columna" rowHeight="100px" >
-    <mat-grid-tile-header>
-      <img mat-card-image src="../../../assets/img/EstebanPerdomo.jpg" alt="mi foto" class="foto">
-  </mat-grid-tile-header>
-
-
-    <mat-grid-tile [colspan]="1" [rowspan]="4" >
-     <div class="lista">
-        <h2 class="animate__animated animate__backInRight">Mis Datos:</h2>
-        <div>
-          <ul class="animate__animated animate__backInRight">
-            <li>{{ esteban.nombres }}</li>
-            <li>{{ esteban.correo }}</li>
-            <li>edad: {{ esteban.Edad + " años" }}</li>
-          </ul>
-        </div>
+      <div class="cta-row">
+        <a class="btn-link" href="#sobre-mi">Ver perfil</a>
+        <a class="btn-link secondary" href="#contacto">Contactar</a>
       </div>
-    </mat-grid-tile>
+    </div>
 
-    <mat-grid-tile [colspan]="1" [rowspan]="4" >
-      <div class="formularioContacto">
-        <mat-grid-tile-header [ngStyle]="{ background: 'local' }" class="estiloh2">
-          <h2 class="animate__animated animate__backInRight">
-            {{ sigueme }}
-          </h2>
-        </mat-grid-tile-header>
+    <div class="hero-side">
+      <img src="../../../assets/img/EstebanPerdomo.jpg" alt="Foto del desarrollador" class="foto" />
+      <div class="info-card">
+        <h2>{{ esteban.profesion }}</h2>
+        <p>{{ esteban.correo }}</p>
+        <p>Edad: {{ esteban.Edad }} años</p>
+      </div>
+    </div>
+  </div>
 
-        <formulario></formulario>
+  <div class="banner-unity">
+    <div class="banner-overlay">
+      <h3>Explorando el desarrollo de videojuegos con Unity y C#</h3>
+      <p>Combino software, calidad y experiencias interactivas en proyectos que buscan impacto y continuidad.</p>
+    </div>
+  </div>
 
-          <h4 class="animate__animated animate__flash d-inline footer-animated mt-5" >Mis sitios:</h4>
-
-          <mat-icon (click)="miFacebook()" class="facebook"
-            ><img
-              src="../../../assets/icons/facebook.svg"
-              alt="imagen facebook"
-          /></mat-icon>
-
-          <mat-icon (click)="miWhatssap()" class="whassap"
-            ><img
-              src="../../../assets/icons/whatsapp.svg"
-              alt="imagen whatsapp"
-          /></mat-icon>
-
-          <mat-icon (click)="miLinkedin()" class="linkedin">
-            <img
-              src="../../../assets/icons/linkedin.svg"
-              alt="imagen linkedin"
-            />
-          </mat-icon>
-        </div>
-     </mat-grid-tile>
-  </mat-grid-list>
+  <div class="formularioContacto" id="contacto">
+    <div class="contact-header">
+      <div>
+        <h2>{{ sigueme }}</h2>
+        <p class="contact-copy">Estoy abierto a oportunidades como Ingeniero de Sistemas, Desarrollador de Software o áreas afines.</p>
+      </div>
+      <div class="social-links">
+        <a class="social-link" (click)="miGithub()">GitHub</a>
+        <a class="social-link" (click)="miLinkedin()">LinkedIn</a>
+        <a class="social-link" (click)="miCorreo()">Correo</a>
+      </div>
+    </div>
+    <formulario></formulario>
+  </div>
 </div>

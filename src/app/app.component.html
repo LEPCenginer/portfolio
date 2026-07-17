@@ -1,46 +1,26 @@
-<!-- Empieza el header -->
-<div *ngIf="cargando; then noMostrar else mostrar"></div>
-
-<ng-template #noMostrar>
-  <h2 class="entrada animate__animated animate__bounceOut">CONOCEME</h2>
-  <mat-spinner class="cargar"></mat-spinner>
-</ng-template>
-
-<ng-template #mostrar>
-  <header>
-    <div>
-      <nav>
-        <a [routerLink]="['/Home']" [routerLinkActive]="['active']">
-          <button mat-fab extended class="colorBotones">
-            <mat-icon>home</mat-icon>
-            Home
-          </button>
-        </a>
-
-        <a [routerLink]="['/About']" [routerLinkActive]="['active']" >
-          <button mat-fab extended class="colorBotones">
-            <mat-icon>person</mat-icon>
-            Acerca de mí
-          </button>
-        </a>
-
-        <a [routerLink]="['/projects']" [routerLinkActive]="['active']" >
-          <button mat-fab extended class="colorBotones">
-            <mat-icon>work</mat-icon>
-            Proyectos
-          </button>
-        </a>
-
-        <a [routerLink]="['/AppliedStudies']" [routerLinkActive]="['active']" >
-          <button mat-fab extended class="colorBotones">
-            <mat-icon>school</mat-icon>
-            Estudios Realizados
-          </button>
-        </a>
-      </nav>
-    </div>
+<div class="page-shell">
+  <header class="topbar">
+    <div class="brand">UNITY DEV</div>
+    <nav class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Habilidades</a>
+    </nav>
   </header>
-  <!-- termina el header -->
 
-  <router-outlet></router-outlet>
-</ng-template>
+  <main class="single-page">
+    <section id="inicio">
+      <app-home></app-home>
+    </section>
+
+    <section id="sobre-mi">
+      <app-about></app-about>
+    </section>
+
+    <section id="proyectos">
+      <app-projects></app-projects>
+    </section>
+
+
+  </main>
+</div>

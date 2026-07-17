@@ -8,19 +8,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   justify-content: left !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body{
   width: 100vw;
-  background-image: linear-gradient(to right bottom, #fbfbfd, #eeeef0, #e2e2e3, #d5d5d6, #c9c9c9);
-  /* background-image: url("https://media.istockphoto.com/id/1136947323/es/foto/empresario-analizando-los-datos.jpg?s=1024x1024&w=is&k=20&c=J4Rx1I7TotflW10NpMTq0i3_lmGRQatOgZYjeU5WhAo=");  */
-  background-attachment: fixed;
-  background-repeat: no-repeat; /* no se repita la imagen */
-  background-size: cover; /*toda la pantalla*/
-  background-position: center; /*la imagen centrada*/
-  overflow-x: hidden; /*ocultar*/
+  background: #020617;
+  overflow-x: hidden;
   overflow-y: scroll;
-  scroll-behavior: smooth;
-
+  color: #e2e8f0;
 }
 
 

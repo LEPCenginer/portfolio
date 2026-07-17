@@ -5,32 +5,25 @@ import { Estudio } from './estudios';
   providedIn: 'root'
 })
 export class ServiciosService {
+  private cursos: Array<Estudio>;
 
-private cursos: Array<Estudio>;
+  constructor() {
+    this.cursos = new Array();
+    this.setArregloEstudio();
+  }
 
-constructor(){
-  this.cursos = new Array();
-  this.setArregloEstudio();
-}
+  public setArregloEstudio(): void {
+    this.cursos = [
+      new Estudio('Unity', 'Desarrollo de juegos 2D y 3D, escenas, prefabs y sistemas de gameplay.', ''),
+      new Estudio('C#', 'Programación orientada a objetos, eventos, corrutinas y lógica de juego.', ''),
+      new Estudio('Git y GitHub', 'Control de versiones y colaboración en proyectos de desarrollo.', ''),
+      new Estudio('UI/UX', 'Interfaces de usuario, HUD y experiencia del jugador.', ''),
+      new Estudio('Blender básico', 'Modelado y exportación de activos simples para prototipos.', ''),
+      new Estudio('Game Design', 'Diseño de mecánicas, niveles y balance de gameplay.', '')
+    ];
+  }
 
-public setArregloEstudio():void{
-    this.cursos =[
-        new Estudio("Scrum Foundations", "Scrum Foundation Professional Certificate", "../../assets/img/scrum.jpg"),
-        new Estudio("Java Fundamentals", "Fundamentos en Java", "../../assets/img/certificadoOracle.jpg"),
-        new Estudio("Java Foundations", "Java SE", "../../assets/img/course_certificate.jpg"),
-        new Estudio("Universidad Java", "Aprende Java Desde Cero a Experto", "../../assets/img/universidadJava.jpg"),
-        new Estudio("AWS PRACTITIONER", "AWS CLOUD PRACTITIONER", "../../assets/img/AWS.jpg"),
-        new Estudio("Desarrollo de Aplicaciones con Manejo de Datos JAVA", "Desarrollo de Aplicaciones con Manejo de Datos en la Memoria-JAVA", "../../assets/img/DesarrolloAplicaciones.jpg"),
-        new Estudio("Desarrollo de Applets", "Desarrollo de Applets/Aplicaciones con uso de Bases de Datos,Redes,Servlets y Multimedia", "../../assets/img/appletsRedes.jpg"),
-        new Estudio("Marco de trabajo SCRUM", "Aplicacion del Marco de Trabajo SCRUM para Proyectos de Desarrollo de Software", "../../assets/img/certificadoScrum.jpg"),
-        new Estudio("Variables y Estructuras de Control Java", "Variables y Estructuras de Control con JAVA", "../../assets/img/VARIABLESYESTRUCTURAS.jpg"),
-        new Estudio("Diseño de Bases de Datos", "Database Design", "../../assets/img/diseñoDeBasesDeDatos_page-0001.jpg"),
-        new Estudio("Diseño de Bases de Datos", "Database Design", "../../assets/img/CERTIFICADOHTML.jpg")
-  ];
-}
-
-public getArregloEstudio():Array<Estudio>{
-  console.log(this.cursos)
-  return this.cursos;
+  public getArregloEstudio(): Array<Estudio> {
+    return this.cursos;
   }
 }

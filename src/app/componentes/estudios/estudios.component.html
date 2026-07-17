@@ -1,17 +1,14 @@
+<div class="studies-wrapper">
+  <h2 class="section-title">Ruta de aprendizaje</h2>
+  <p class="intro">
+    Estoy construyendo mis habilidades alrededor de Unity, programación en C# y diseño de juegos,
+    con enfoque en aprendizaje práctico y mejora continua.
+  </p>
 
-<h2>Cursos</h2>
-
-<div>
-  <ul  *ngFor="let estudio of estudios" class="bordes">
-   <li>
-    {{ estudio.getNombre()}}:
-      <br/> &nbsp;
-    {{estudio.getDescripcion()}}
-      <br/>
-    <img [src]="estudio.getImage()" class="imagenes"/>
-  </li>
-
-
-  </ul>
-
-
+  <div class="study-grid">
+    <div *ngFor="let estudio of estudios" class="study-card">
+      <h3>{{ estudio.getNombre() }}</h3>
+      <p>{{ estudio.getDescripcion() }}</p>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 export var Esteban = {
-    nombres: "Lizardo Esteban Perdomo Carrera",
-    Edad: 26,
-    correo: "extebancarrera96@gmail.com"
+    nombres: "Tu nombre",
+    Edad: 24,
+    correo: "tuemail@ejemplo.com",
+    profesion: "Ingeniero de Sistemas | QA Automation | Unity"
 }
