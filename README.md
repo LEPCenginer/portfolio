@@ -4,11 +4,7 @@ Este proyecto ahora funciona como un sitio web estático de una sola página, co
 
 ## Desarrollo local
 
-Puedes abrir directamente el archivo [src/index.html](src/index.html) en el navegador o ejecutar:
-
-```bash
-npm start
-```
+Puedes abrir directamente el archivo [src/index.html](src/index.html) en el navegador
 
 Esto levantará un servidor local en http://localhost:8000/.
 
